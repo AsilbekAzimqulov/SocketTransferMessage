@@ -25,9 +25,9 @@ class Client(context: Context) {
     private var hostAddress: InetAddress? = null
     private var hostPort: Int = 0
     private var mNsdManager: NsdManager? = null
-    private lateinit var onReceive: (String) -> Unit
-    private lateinit var onDisconnectServer: (String) -> Unit
-    private lateinit var onErrorConnection: (String) -> Unit
+    lateinit var onReceive: (String) -> Unit
+    lateinit var onDisconnectServer: (String) -> Unit
+    lateinit var onErrorConnection: (String) -> Unit
 
     init {
         handler = Handler()

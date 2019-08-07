@@ -20,9 +20,9 @@ class Server(context: Context) {
     private var handler: Handler? = null
     private var mNsdManager: NsdManager? = null
     private val clientsSocket = arrayListOf<Socket>()
-    private lateinit var onReceive: (String) -> Unit
-    private lateinit var onConnectedDevice: (ArrayList<Socket>) -> Unit
-    private lateinit var onDisconnectDevice: (String) -> Unit
+     lateinit var onReceive: (String) -> Unit
+    lateinit var onConnectedDevice: (ArrayList<Socket>) -> Unit
+    lateinit var onDisconnectDevice: (String) -> Unit
 
     init {
         handler = Handler()
